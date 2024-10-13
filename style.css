@@ -1,0 +1,82 @@
+/* Main style start */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+/* Sidebar Start */
+.sidebar {
+  width: 300px; /* Sets the width of the sidebar */
+  height: auto; /* Allows the height to adjust based on content */
+  background-color: #f7f7f7; 
+  position: fixed; /* Keeps the sidebar fixed in place while scrolling */
+  top: 0; /* Extends sidebar to the top */
+  left: 0; /* Positions the sidebar on the left side */
+  bottom: 0; /* Extends the sidebar to the bottom */
+  padding: 20px; /* Adds padding inside the sidebar */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex; /* Enables flexbox layout for the sidebar */
+  flex-direction: column; /* Stacks flexbox vertically*/
+  justify-content: space-between; /* evenly distributes space*/
+}
+
+.search-box input {
+  width: auto; /* Makes the search input adjust to viewport*/
+  padding: 12px; /* Adds padding inside the input field */
+  margin-bottom: 20px; /* Adds space below the input field */
+  border: 1px solid #ccc; /* Adds a light border around the input */
+  border-radius: 5px; /* Rounds the corners of the input */
+}
+
+.sidebar-nav {
+  list-style-type: none; /* Removes bullet points from the list */
+  margin-bottom: 30px; /* Adds space below the navigation */
+}
+
+.sidebar-nav>li {
+  margin: 15px 0; /* Adds vertical space between navigation items */
+}
+
+.sidebar-nav>li>span {
+  font-size: 18px; /* Sets the font size for the section headers */
+  color: #000000; /* Sets the text color for section headers */
+  font-weight: bold; /* Makes the section headers bold */
+  display: block; /* Ensures the header takes up the full width */
+  margin-bottom: 5px; /* Adds space below the section header */
+}
+
+.sidebar-nav>li>a {
+  text-decoration: none; /* Removes the underline from links */
+  color: #333; /* Sets the text color for links */
+  font-size: 16px; /* Sets the font size for links */
+  display: block; /* Ensures the link takes up the full width */
+  padding: 12px; /* Adds padding inside the link */
+  border-radius: 5px; /* Rounds the corners of the link */
+}
+
+.sidebar-nav ul {
+  list-style: none; /* Removes bullet points from nested lists */
+  padding-left: 25px; /* Adds padding to the left for nested lists */
+}
+
+.sidebar-nav ul li a {
+  margin: 8px 0; /* Adds vertical space between nested links */
+  font-size: 16px; /* Sets the font size for nested links */
+  color: #000000; /* Sets the text color for nested links */
+}
+
+.sidebar-footer a {
+  text-align: center; /* Centers the footer links */
+  display: block; /* Ensures footer links take up the full width */
+  margin: 5px 0; /* Adds vertical space between footer links */
+  text-decoration: none; /* Removes the underline from footer links */
+  color: #000000; /* Sets the text color for footer links */
+  font-size: 14px; /* Sets the font size for footer links */
+}
+
+/* Sidebar End */
