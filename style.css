@@ -1,185 +1,237 @@
-/* General body styles */
-body {
+
+.header {
+  width: 270px;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  z-index: 1;
+}
+.sidebar {  
+  width: 30%;  /* Sets the sidebar width to 30% of the viewport */  
+  background-image: url(images/1\ \(6\).png);  /* Sets a background image for the sidebar */
+  background-repeat: no-repeat;  
+  color: #fff;  /* Sets the text color to white */  
+  min-height: 100%;  /* Sets the height to 100% of the viewport */  
+  position: static;  /* Ensures the sidebar remains in its position */  
+  padding: 20px;  /* Adds 20px padding inside the sidebar */  
+  box-sizing: border-box;  /* Includes padding and border in the element's total width and height */  
+  text-align: center;  /* Centers text horizontally */  
+  border-right: 2px solid #e0e0e0;  /* Adds a right border to the sidebar */  
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);  /* Adds a subtle shadow to the sidebar */  
+  border-top-right-radius: 20px;  /* Rounds the top right corner */  
+  border-bottom-right-radius: 20px;  /* Rounds the bottom right corner */
+}
+.sidebar h2 {  
+  font-family: 'Cursive';  /* Sets the font for the heading to cursive */  
+  color: #ffffff;  /* Sets the text color to white */  
+  text-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4, 0 0 20px #521b65;  /* Adds a neon glow effect to the text */
+}
+.sidebar-nav {  
+  list-style: none;  /* Removes bullet points from the list */  
+  padding: 0;  /* Removes default padding */  
+  margin: 0;  /* Removes default margin */  
+  text-align: left;  /* Aligns text to the left */
+}
+.sidebar-nav li {  
+  margin-bottom: 20px;  /* Adds 20px margin below each list item */
+}
+.sidebar-nav a {  
+  display: block;  /* Makes the links take up the full width of their container */  
+  color: #ffffff;  /* Sets the text color to white */  
+  text-decoration: none;  /* Removes underline from the links */  
+  font-size: 1.2em;  /* Sets the font size */  
+  padding: 10px;  /* Adds 10px padding around the links */  
+  border-radius: 5px;  /* Rounds the corners of the links */  
+  transition: all 0.3s ease-in-out;  /* Adds a smooth transition effect */  
+  text-shadow: 0 0 5px #fffcfd, 0 0 10px #cbcbcb, 0 0 15px #ffffff;  /* Adds a neon glow effect */  
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Adds a subtle shadow */  
+  background: rgba(255, 255, 255, 0.1);  /* Sets a slightly transparent background */
+}
+.sidebar-nav a:hover {  
+  background: rgba(6, 81, 179, 0.779);  /* Changes background color on hover */  
+  color: #ffffff;  /* Keeps text color white on hover */  
+  box-shadow: 0 0 5px #12b6e9, 0 0 10px #22deff, 0 0 20px #ffffff;  /* Enhances neon glow on hover */
+}
+.sidebar-nav a:nth-child(1) {  
+  color: #f6edf6;  /* Sets text color to neon pink */  
+  text-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4, 0 0 15px #ff69b4;  /* Adds neon glow effect */
+}
+.sidebar-nav a:nth-child(2) {  
+  color: #ff00ff;  /* Sets text color to neon purple */  
+  text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff;  /* Adds neon glow effect */
+}
+.fixed-container {
+  background-color: #1d0d61;
+  width: 970px;
+  box-sizing: content-box;
+   top: 0%;
+  right: 0%;
+   position: fixed;
+  height: 100%; /* Ensures the container stretches to the full height */
+  overflow-y: auto; /* Adds scroll if needed */
+}
+
+.content {
+ padding: 5%;
+
+     /* Makes sure content is scrollable if needed */
+}
+/* Style Below this to avoid messing up main theme  */
+
+.features {
+  border: #ff00ff;
+  border-style: inset;
+  border-width: 3px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.features h2 {
   max-width: fit-content;
-  max-height: fit-content;
-  padding-left: 25%;
-  padding-right: 0%;
+  text-align: center;
+  color: #19389e;
+}
+
+.feature-cards {
+ background: #ffffff;
+ max-width: inherit;
+ box-shadow: #333;
+ box-sizing: content-box;
+   
+ 
+}
+.card {
+   border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(80, 74, 74, 0.1);
+  padding: 20px;
+  text-align: center;
  }
-/* end styling */
-
-
-/* Sidebar styles */
-.sidebar-nav {
-   background-color: #555; /* Sets the background color of the sidebar to grey (#555) */
-  color: #fff; /* Sets the text color within the sidebar to white (#fff) */
-  width: 270px; /* Sets the width of the sidebar to 270px */
-  padding: 20px; /* Adds 20px padding around the content inside the sidebar */
-  position: fixed; /* Positions the sidebar relative to the viewport, so it stays in place while scrolling */
-  left: 0; /* Positions the sidebar at the left edge of the viewport */
-  top: 0; /* Positions the sidebar at the top edge of the viewport */
-  height: 100%; /* Sets the height of the sidebar to 100% of its parent container's height */
-  list-style: none; /* Removes the default bullet points from the sidebar navigation list */
-  padding: 0; /* Removes any default padding from the sidebar navigation list */
-  margin: 0; /* Removes any default margin from the sidebar navigation list */
-  text-decoration: none;  
+.card h3 {
+  color: #333;
 }
-
-.sidebar-nav li {
+.card p {
+  color: #666;
+}
+.card a {
+  display: flex;
+  margin-top: 10px;
+  color: #3498db;
   text-decoration: none;
-  margin-bottom: 10px; /* Adds 10px margin to the bottom of each list item in the sidebar navigation */
 }
-
-.sidebar-nav a {
-  display: block; /* Makes the links in the sidebar navigation take up the full width available */
-  color: #fff; /* Sets the link color to white (#fff) */
-  text-decoration: none; /* Removes the default underline from the links */
-  padding: 10px; /* Adds 10px padding around the text of each link */
+.card a:hover {
+  text-decoration: underline;
 }
-
-.sidebar-nav a:active {
-  
-  color: #fff; /* Sets the link color to white when active (clicked) */
-  text-decoration: underline; /* Adds an underline to the link when active */
+.card-image {
+  width: fit-content;
+  height: fit-content;
+   background-color: #ffffff;
+  border-radius: 5px;
 }
-
-.sidebar-nav a:hover {
-  background-color: #777; /* Adds a slightly darker grey background color when hovering over a link */
-}
-
-.sidebar-footer li {
-  text-decoration: none;
-    text-align: center;
-    border: #555;
-    border-style: inset;
-}
-
-.sidebar-footer a {
-  display: block;
-  color: #555; /* Or any other valid color value */
+/* start terms and conditions styling */
+.terms-container {
+  padding: 20px;
   background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
 }
 
-/* End of Sidebar styles */
-
-.search-box {
-  ;
-  margin-top: auto; /* Pushes the search box to the bottom of its container (likely within the sidebar) */
-  width: 100%; /* Makes the search box take up the full width of its container */
-  }
-
-.search-box input {
-  width: 100%; /* Makes the search input field take up the full width of its container (the search box) */
-  padding: 8px; /* Adds 8px padding around the text inside the search input field */
-  border: 1px solid #ddd; /* Adds a 1px solid border around the search input field with a light grey color (#ddd) */
-  border-radius: 4px; /* Adds a 4px border-radius to the search input field, giving it slightly rounded corners */
- 
+.terms-container h1, .terms-container h2 {
+  color: #333;
+  text-align: center;
 }
-.search-box button {
-  background-color: darkblue;
+
+.terms-container p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.terms-container a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.terms-container a:hover {
+  text-decoration: underline;
+}
+/* end terms and conditions styling */
+/* start privacy policy styling  */
+.privacy-container {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.privacy-container h1, .privacy-container h2 {
+  color: #333;
+  text-align: center;
+}
+
+.privacy-container p, .privacy-container ul {
+  color: #666;
+  line-height: 1.6;
+}
+
+.privacy-container ul {
+  padding-left: 20px;
+}
+
+.privacy-container a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.privacy-container a:hover {
+  text-decoration: underline;
+}
+/* end privacy policy styling */
+/* start styling for mail-in repair request */
+.service-request-form-container {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.service-request-form-container h2 {
+  text-align: center;
+  color: #333;
+}
+
+.service-request-form-container label {
+  display: block;
+  margin-top: 10px;
+  color: #333;
+}
+
+.service-request-form-container input,
+.service-request-form-container select,
+.service-request-form-container textarea {
   width: 100%;
-}
-
-
-
-.pricing-section {
-  font-size: small;
-  max-width: fit-content;
-  border: 5px solid #ccc; /* Add a border to the section */
-  margin-bottom: 20px; /* Add spacing below the section */
-  text-align: center;
-}
-
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
-  column-gap: 10px;
-  row-gap: 10px;
-}
- 
-
-.pricing-card {
-  border: 1px solid #ccc;
-  margin: auto 5%;
-  text-align: center;
-  max-width: fit-content;
-  max-height: fit-content;
-
-}
-
-.pricing-card img {
-  /* Add styles for the icons */
-  width: 100px;
-  margin-bottom: 10px;
-}
-
-.pricing-card h3 {
-  /* Add styles for the headings */
-  margin-bottom: 10px;
-}
-
-.pricing-card p {
-  /* Add styles for the paragraphs */
-  font-size: 14px;
-}
-
-.insights-section {
-   background-color: #6D758F;
-  padding: 80px 167px;
-  max-width: 70%;
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.insights-section h1 {
-  font-family: 'Inter', sans-serif;
-  font-weight: 850;
-  font-size: 48px;
-  line-height: 48px;
-  text-align: center;
-  color: #FFFFFF;
-  margin-bottom: 16px;
-}
-
-.insights-section p {
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  text-align: center;
-  color: #FFFFFF;
-  margin-bottom: 32px;
-}
-
-.insights-section form {
-  display: flex;
-  gap: 10px;
-}
-
-.insights-section input[type="email"] {
-  background-color: #FFFFFF;
-  border: 1px solid #F1F3F7;
-  box-shadow: 0px 1px 4px rgba(25, 33, 61, 0.08);
-  border-radius: 8px;
-  padding: 12px 18px;
-  width: 300px;
-}
-
-.insights-section button[type="submit"] {
-  background-color: #6D758F;
-  color: #FFFFFF;
-  border: none;
-  box-shadow: 0px 1px 4px rgba(25, 33, 61, 0.08);
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
   border-radius: 4px;
-  padding: 12px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 18px;
-  cursor: pointer;
 }
 
+.service-request-form-container button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
 
-
-  
+.service-request-form-container button:hover {
+  background-color: #2980b9;
+}

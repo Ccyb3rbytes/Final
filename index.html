@@ -1,104 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Cyb3rbytes HomePage</title>
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-  <nav class="sidebar">
-    <h2 style="text-align: center;">Cyb3rbytes</h2>
-    <ul class="sidebar-nav">
-                <li>
-          <a href="index.html">Homepage</a>
-          <ul>
-            <li><a href="mission.html">Mission Statement</a></li>
-            <li><a href="hours.html">Opening Hours</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </li>
-        <li>
-          <span>Pricing</span>
-          <ul>
-            <li><a href="pricing-model.html">Pricing Model</a></li>
-            <li><a href="quote.html">Get-A-Quote</a></li>
-            <li><a href="repair-request.html">Mail-in Repair Request</a></li>
-          </ul>
-        </li>
-        <li>
-          <span>Additional Info</span>
-          <ul>
-            <li><a href="testimonials.html">Testimonials</a></li>
-            <li><a href="FAQ.html">FAQ</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-          </ul>
-        </li>
-        <footer class="sidebar-footer">
-          <ul>
-            <li><a href="terms-&-conditions.html">Terms & Conditions</a></li>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-          </ul>  
-        </footer>
-      </ul>
-    </nav>
-
-    <main class="main-content">
-      <div class="welcome-section">
-        <section class="insights-section">
-          <div class="container">
-            <h2>Not local? Thats ok we have mail-in options</h2>
-            <form>
-              <input type="text" placeholder="Search...">
-              <button type="submit">Send</button>
-            </form>
-          </div>
-        </section>
-      </div>
-    </main>
-                
-      <section class="pricing-section">
-        <h2>Calculating your Quote</h2>
-        <p>Where Else could you get your iPhone 6 screen replaced for $25?</p>
-        <div class="pricing-grid">
-          <div class="pricing-card">
-            <img src="images/ph3.png" alt="Icon 1">
-            <h3>Refurbished Retail Price</h3>
-            <p>
-              We use the average refurbished retail price
-              in your calculation. We charge based on
-              the average markup of 25%.
-            </p>
-          </div>
-          <div class="pricing-card">
-            <h3>25% of your RRP = Our Labor</h3>
-            <p>
-              25% of 80.00$ is 20.00$. This is how much we
-              charge you for labor.
-            </p>
-            <img src="images/ph3.png" alt="Icon 2">
-          </div>
-          <div class="pricing-card">
-            <img src="images/ph3.png" alt="Icon 3">
-            <h3>+Cost of Parts+Shipping</h3>
-            <p>
-              What is the average price of a iPhone 6 screen? It costs
-              around 5.00$, which we add onto the labor
-              price. Adding onto the 20.00$, we get 25$. However,
-              if you could shi
-            </p>
-          </div>
-        </div>
-      </section>
-    <script>
-      const currentPage = window.location.pathname.split("/").pop();
-      const sidebarLinks = document.querySelectorAll(".sidebar-nav a");
-
-      sidebarLinks.forEach(link => {
-        if (link.getAttribute("href") === currentPage) {
-          link.classList.add("active");
-        }
-      });
-    </script>
-  </body>
+</head>
+<body>
+    <header>
+        <nav class="sidebar">
+            <h2>Welcome to Cyb3rbytes</h2>
+            <ul class="sidebar-nav">
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href="mission.html">Mission Statement</a></li>
+                <li><a href="hours.html">Opening Hours</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="pricing-model.html">Pricing Model</a></li>
+                <li><a href="quote.html">Get-A-Quote</a></li>
+                <li><a href="repair-request.html">Mail-in Repair Request</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+       <main class="fixed-container">
+                                    <div class="content">
+                                      
+                                    </div>
+                                </main>
+                                
+</body>
 </html>
