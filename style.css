@@ -1,82 +1,185 @@
-/* Main style start */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* General body styles */
 body {
-  font-family: Arial, sans-serif;
-  display: flex;
-}
-/* Sidebar Start */
-.sidebar {
-  width: 300px; /* Sets the width of the sidebar */
-  height: auto; /* Allows the height to adjust based on content */
-  background-color: #f7f7f7; 
-  position: fixed; /* Keeps the sidebar fixed in place while scrolling */
-  top: 0; /* Extends sidebar to the top */
-  left: 0; /* Positions the sidebar on the left side */
-  bottom: 0; /* Extends the sidebar to the bottom */
-  padding: 20px; /* Adds padding inside the sidebar */
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  display: flex; /* Enables flexbox layout for the sidebar */
-  flex-direction: column; /* Stacks flexbox vertically*/
-  justify-content: space-between; /* evenly distributes space*/
-}
+  max-width: fit-content;
+  max-height: fit-content;
+  padding-left: 25%;
+  padding-right: 0%;
+ }
+/* end styling */
 
-.search-box input {
-  width: auto; /* Makes the search input adjust to viewport*/
-  padding: 12px; /* Adds padding inside the input field */
-  margin-bottom: 20px; /* Adds space below the input field */
-  border: 1px solid #ccc; /* Adds a light border around the input */
-  border-radius: 5px; /* Rounds the corners of the input */
-}
 
+/* Sidebar styles */
 .sidebar-nav {
-  list-style-type: none; /* Removes bullet points from the list */
-  margin-bottom: 30px; /* Adds space below the navigation */
+   background-color: #555; /* Sets the background color of the sidebar to grey (#555) */
+  color: #fff; /* Sets the text color within the sidebar to white (#fff) */
+  width: 270px; /* Sets the width of the sidebar to 270px */
+  padding: 20px; /* Adds 20px padding around the content inside the sidebar */
+  position: fixed; /* Positions the sidebar relative to the viewport, so it stays in place while scrolling */
+  left: 0; /* Positions the sidebar at the left edge of the viewport */
+  top: 0; /* Positions the sidebar at the top edge of the viewport */
+  height: 100%; /* Sets the height of the sidebar to 100% of its parent container's height */
+  list-style: none; /* Removes the default bullet points from the sidebar navigation list */
+  padding: 0; /* Removes any default padding from the sidebar navigation list */
+  margin: 0; /* Removes any default margin from the sidebar navigation list */
+  text-decoration: none;  
 }
 
-.sidebar-nav>li {
-  margin: 15px 0; /* Adds vertical space between navigation items */
+.sidebar-nav li {
+  text-decoration: none;
+  margin-bottom: 10px; /* Adds 10px margin to the bottom of each list item in the sidebar navigation */
 }
 
-.sidebar-nav>li>span {
-  font-size: 18px; /* Sets the font size for the section headers */
-  color: #000000; /* Sets the text color for section headers */
-  font-weight: bold; /* Makes the section headers bold */
-  display: block; /* Ensures the header takes up the full width */
-  margin-bottom: 5px; /* Adds space below the section header */
+.sidebar-nav a {
+  display: block; /* Makes the links in the sidebar navigation take up the full width available */
+  color: #fff; /* Sets the link color to white (#fff) */
+  text-decoration: none; /* Removes the default underline from the links */
+  padding: 10px; /* Adds 10px padding around the text of each link */
 }
 
-.sidebar-nav>li>a {
-  text-decoration: none; /* Removes the underline from links */
-  color: #333; /* Sets the text color for links */
-  font-size: 16px; /* Sets the font size for links */
-  display: block; /* Ensures the link takes up the full width */
-  padding: 12px; /* Adds padding inside the link */
-  border-radius: 5px; /* Rounds the corners of the link */
+.sidebar-nav a:active {
+  
+  color: #fff; /* Sets the link color to white when active (clicked) */
+  text-decoration: underline; /* Adds an underline to the link when active */
 }
 
-.sidebar-nav ul {
-  list-style: none; /* Removes bullet points from nested lists */
-  padding-left: 25px; /* Adds padding to the left for nested lists */
+.sidebar-nav a:hover {
+  background-color: #777; /* Adds a slightly darker grey background color when hovering over a link */
 }
 
-.sidebar-nav ul li a {
-  margin: 8px 0; /* Adds vertical space between nested links */
-  font-size: 16px; /* Sets the font size for nested links */
-  color: #000000; /* Sets the text color for nested links */
+.sidebar-footer li {
+  text-decoration: none;
+    text-align: center;
+    border: #555;
+    border-style: inset;
 }
 
 .sidebar-footer a {
-  text-align: center; /* Centers the footer links */
-  display: block; /* Ensures footer links take up the full width */
-  margin: 5px 0; /* Adds vertical space between footer links */
-  text-decoration: none; /* Removes the underline from footer links */
-  color: #000000; /* Sets the text color for footer links */
-  font-size: 14px; /* Sets the font size for footer links */
+  display: block;
+  color: #555; /* Or any other valid color value */
+  background-color: #fff;
 }
 
-/* Sidebar End */
+/* End of Sidebar styles */
+
+.search-box {
+  ;
+  margin-top: auto; /* Pushes the search box to the bottom of its container (likely within the sidebar) */
+  width: 100%; /* Makes the search box take up the full width of its container */
+  }
+
+.search-box input {
+  width: 100%; /* Makes the search input field take up the full width of its container (the search box) */
+  padding: 8px; /* Adds 8px padding around the text inside the search input field */
+  border: 1px solid #ddd; /* Adds a 1px solid border around the search input field with a light grey color (#ddd) */
+  border-radius: 4px; /* Adds a 4px border-radius to the search input field, giving it slightly rounded corners */
+ 
+}
+.search-box button {
+  background-color: darkblue;
+  width: 100%;
+}
+
+
+
+.pricing-section {
+  font-size: small;
+  max-width: fit-content;
+  border: 5px solid #ccc; /* Add a border to the section */
+  margin-bottom: 20px; /* Add spacing below the section */
+  text-align: center;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+  column-gap: 10px;
+  row-gap: 10px;
+}
+ 
+
+.pricing-card {
+  border: 1px solid #ccc;
+  margin: auto 5%;
+  text-align: center;
+  max-width: fit-content;
+  max-height: fit-content;
+
+}
+
+.pricing-card img {
+  /* Add styles for the icons */
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.pricing-card h3 {
+  /* Add styles for the headings */
+  margin-bottom: 10px;
+}
+
+.pricing-card p {
+  /* Add styles for the paragraphs */
+  font-size: 14px;
+}
+
+.insights-section {
+   background-color: #6D758F;
+  padding: 80px 167px;
+  max-width: 70%;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.insights-section h1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 850;
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+
+.insights-section p {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 32px;
+}
+
+.insights-section form {
+  display: flex;
+  gap: 10px;
+}
+
+.insights-section input[type="email"] {
+  background-color: #FFFFFF;
+  border: 1px solid #F1F3F7;
+  box-shadow: 0px 1px 4px rgba(25, 33, 61, 0.08);
+  border-radius: 8px;
+  padding: 12px 18px;
+  width: 300px;
+}
+
+.insights-section button[type="submit"] {
+  background-color: #6D758F;
+  color: #FFFFFF;
+  border: none;
+  box-shadow: 0px 1px 4px rgba(25, 33, 61, 0.08);
+  border-radius: 4px;
+  padding: 12px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  cursor: pointer;
+}
+
+
+
+  
