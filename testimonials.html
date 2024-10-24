@@ -1,61 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Testimonials</title>
-  <link rel="stylesheet" href="style.css">
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>pricing-model</title>
-      <link rel="stylesheet" href="style.css">
-      <!DOCTYPE html>
-      <html lang="en">
-        <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Our Mission</title>
-          <link rel="stylesheet" href="style.css">
-          <nav class="sidebar">
-            <h2 style="text-align: center;">Cyb3rbytes</h2>
-            <ul class="sidebar-nav">
-                        <li>
-                  <a href="index.html">Homepage</a>
-                  <ul>
-                    <li><a href="mission.html">Mission Statement</a></li>
-                    <li><a href="hours.html">Opening Hours</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <span>Pricing</span>
-                  <ul>
-                    <li><a href="pricing-model.html">Pricing Model</a></li>
-                    <li><a href="quote.html">Get-A-Quote</a></li>
-                    <li><a href="repair-request.html">Mail-in Repair Request</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <span>Additional Info</span>
-                  <ul>
-                    <li><a href="testimonials.html">Testimonials</a></li>
-                    <li><a href="FAQ.html">FAQ</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                  </ul>
-                </li>
-                <footer class="sidebar-footer">
-                  <ul>
-                    <li><a href="terms-&-conditions.html">Terms & Conditions</a></li>
-                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                  </ul>  
-                </footer>
-              </ul>
-            </nav>
-        </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyb3rbytes HomePage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
 <body>
-  
+    <header>
+        <nav class="sidebar">
+            <h2>Welcome to Cyb3rbytes</h2>
+            <ul class="sidebar-nav">
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href="mission.html">Mission Statement</a></li>
+                <li><a href="hours.html">Opening Hours</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="pricing-model.html">Pricing Model</a></li>
+                <li><a href="quote.html">Get-A-Quote</a></li>
+                <li><a href="repair-request.html">Mail-in Repair Request</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="fixed-container">
+        <div class="content">
+            <div class="feedback-container">
+                <div class="header">
+                    <h1>Feedback Corner</h1>
+                    <p>See what others had to say about us or leave your own feedback</p>
+                </div>
+                <form id="feedbackForm">
+                    <label for="name">Your Name:</label><br>
+                    <input type="text" id="name" name="name"><br><br>
+
+                    <label for="device">Device Type:</label><br>
+                    <input type="text" id="device" name="device"><br><br>
+
+                    <label for="feedback">Feedback:</label><br>
+                    <textarea id="feedback" name="feedback"></textarea><br><br>
+
+                    <button type="button" onclick="addFeedback()">Submit</button>
+                </form>
+                <div class="quotecontainer">
+
+
+
+                </div>
+
+                <div class="pagination">
+                    <a href="#">&laquo; Previous</a>
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">...</a>
+                    <a href="#">10</a>
+                    <a href="#">Next &raquo;</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        function addFeedback() {
+            const name = document.getElementById('name').value;
+            const device = document.getElementById('device').value;
+            const feedback = document.getElementById('feedback').value;
+
+            const newFeedback = document.createElement('div');
+            newFeedback.classList.add('quote-card');
+            newFeedback.innerHTML = `<h3>${name}</h3><p>${device}</p><p>${feedback}</p>`;
+
+            document.querySelector('.quotecontainer').appendChild(newFeedback);
+            // Clear the form fields after submission
+            document.getElementById('name').value = '';
+            document.getElementById('device').value = '';
+            document.getElementById('feedback').value = '';
+        }
+    </script>
+
 </body>
+
 </html>

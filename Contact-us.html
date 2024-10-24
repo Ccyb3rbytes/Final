@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="sidebar">
+            <h2>Welcome to Cyb3rbytes</h2>
+            <ul class="sidebar-nav">
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href="mission.html">Mission Statement</a></li>
+                <li><a href="Contact-us">Opening Hours</a></li>
+                <li><a href="pricing-model.html">Pricing Model</a></li>
+                <li><a href="quote.html">Get-A-Quote</a></li>
+                <li><a href="repair-request.html">Mail-in Repair Request</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="fixed-container">
+        <div class="content">
+            <div class="hours-of-operation-section">
+                <div class="hours-of-operation-banner">
+                    <h2>Hours of Operation</h2>
+                </div>
+                <table class="hours-of-operation-table">
+                    <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>9:00 AM - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>9:00 AM - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>9:00   AM - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>9:00 AM - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>9:00 AM - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>Closed</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>Closed</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="contact-container">
+                <div class="contact-content">
+                    <div class="contact-header">
+                        <h2>Contact Us</h2>
+                        <p>Have questions? Get in touch with us.</p>
+                    </div>
+                    <form class="contact-form" action="send_email.php" method="post">
+                        <input type="text" name="name" placeholder="Your First & Last Name" required>
+                        <input type="email" name="email" placeholder="Your Email Address" required>
+                        <textarea name="message" placeholder="Your Message"   rows="5" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>
